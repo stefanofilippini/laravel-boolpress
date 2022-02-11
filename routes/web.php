@@ -26,9 +26,10 @@ Route::middleware('auth')
         Route::get('/index', 'IndexController@index')->name('index');
         Route::get('/create', 'CreateController@index')->name('create');
         Route::post('/store', 'CreateController@store')->name('store');
-
+        Route::get('/edit/{id}', 'CreateController@edit')->name('edit');
+        Route::post('/update/{id}', 'CreateController@update')->name('update');
+        Route::get('/show/{id}', 'CreateController@show')->name('show');
     });
-    
 
     Route::get('{any?}', function () {
         return view('guests.home');

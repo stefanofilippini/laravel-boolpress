@@ -3,12 +3,23 @@
 @section('content')
 
     <div class="container">
-        <ul>
+        <table>
             @foreach ($posts as $post)
-                <li>
+            <tr>
+                <td>
                     {{ $post->Title }}
-                </li>
+                </td>
+                <td>
+                    <a href="{{ route('admin.edit', $post->id) }}">EDIT</a>
+                </td>
+                <td>
+                    <a href="{{ route('admin.show', $post->id) }}">SHOW</a>
+                </td>
+                <td>
+                    <a href="#">DELETE</a>
+                </td>
+            </tr>
             @endforeach
-        </ul>
+        </table>
     </div>
 @endsection
