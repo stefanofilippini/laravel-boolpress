@@ -6,9 +6,9 @@
         <ul>
             @foreach ($posts as $post)
                 <li>
-                    {{ $post->title }}
+                    {{ $post->Title }}
                 </li>
             @endforeach
         </ul>
-            
     </div>
+@endsection

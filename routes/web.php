@@ -23,9 +23,12 @@ Route::middleware('auth')
     ->prefix('admin')
     ->group(function() {
         Route::get('/home', 'HomeController@index')->name('home');
-    });
+        Route::get('/index', 'IndexController@index')->name('index');
+        Route::get('/create', 'CreateController@index')->name('create');
+        Route::post('/store', 'CreateController@store')->name('store');
 
-    Route::get('/index', 'HomeController@index')->name('index');
+    });
+    
 
     Route::get('{any?}', function () {
         return view('guests.home');
