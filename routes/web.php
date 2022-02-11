@@ -29,6 +29,7 @@ Route::middleware('auth')
         Route::get('/edit/{id}', 'CreateController@edit')->name('edit');
         Route::post('/update/{id}', 'CreateController@update')->name('update');
         Route::get('/show/{id}', 'CreateController@show')->name('show');
+        Route::get('/delete/{id}', 'CreateController@delete')->name('delete');
     });
 
     Route::get('{any?}', function () {

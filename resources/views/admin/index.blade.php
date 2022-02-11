@@ -16,7 +16,7 @@
                     <a href="{{ route('admin.show', $post->id) }}">SHOW</a>
                 </td>
                 <td>
-                    <a href="#">DELETE</a>
+                    <a href="{{ route('admin.delete', $post->id) }}">DELETE</a>
                 </td>
             </tr>
             @endforeach

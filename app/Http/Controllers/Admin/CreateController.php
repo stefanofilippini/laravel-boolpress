@@ -42,4 +42,10 @@ class CreateController extends Controller
         $post = Post::findOrFail($id);
         return view('admin.show', compact('post'));
     }
+
+    public function delete($id) {
+        $post = Post::findOrFail($id);
+        $post->delete();
+        return redirect()->route('admin.index');
+    }
 }
